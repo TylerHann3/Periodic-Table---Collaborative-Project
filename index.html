@@ -1,3 +1,82 @@
-<div>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Periodic Table</h1>
+    <div class="Periodic-table">
+        <div class="periodic-grid">
+            <button class="periodic-element nonmetal" style="grid-column: 1; grid-row: 1;" onclick="OpenElementModelc('H')">H</button>
+            <button class="periodic-element noble" style="grid-column: 18; grid-row: 1;" onclick="OpenElementModelc('He')">He</button>
+            <button class="periodic-element alkali" style="grid-column: 1; grid-row: 2;" onclick="OpenElementModelc('Li')">Li</button>
+            <button class="periodic-element alkaline" style="grid-column: 2; grid-row: 2;" onclick="OpenElementModelc('Be')">Be</button>
+            <button class="periodic-element metalloid" style="grid-column: 13; grid-row: 2;" onclick="OpenElementModelc('B')">B</button>
+            <button class="periodic-element nonmetal" style="grid-column: 14; grid-row: 2;" onclick="OpenElementModelc('C')">C</button>
+            <button class="periodic-element nonmetal" style="grid-column: 15; grid-row: 2;" onclick="OpenElementModelc('N')">N</button>
+            <button class="periodic-element nonmetal" style="grid-column: 16; grid-row: 2;" onclick="OpenElementModelc('O')">O</button>
+            <button class="periodic-element nonmetal" style="grid-column: 17; grid-row: 2;" onclick="OpenElementModelc('F')">F</button>
+            <button class="periodic-element noble" style="grid-column: 18; grid-row: 2;" onclick="OpenElementModelc('Ne')">Ne</button>
+            <button class="periodic-element alkali" style="grid-column: 1; grid-row: 3;" onclick="OpenElementModelc('Na')">Na</button>
+            <button class="periodic-element alkaline" style="grid-column: 2; grid-row: 3;" onclick="OpenElementModelc('Mg')">Mg</button>
+            <button class="periodic-element metalloid" style="grid-column: 13; grid-row: 3;" onclick="OpenElementModelc('Al')">Al</button>               
+             <button class="periodic-element metalloid" style="grid-column: 14; grid-row: 3;" onclick="OpenElementModelc('Si')">Si</button>
+            <button class="periodic-element nonmetal" style="grid-column: 15; grid-row: 3;" onclick="OpenElementModelc('P')">P</button>
+            <button class="periodic-element nonmetal" style="grid-column: 16; grid-row: 3;" onclick="OpenElementModelc('S')">S</button>
+            <button class="periodic-element nonmetal" style="grid-column: 17; grid-row: 3;" onclick="OpenElementModelc('Cl')">Cl</button>
+            <button class="periodic-element noble" style="grid-column: 18; grid-row: 3;" onclick="OpenElementModelc('Ar')">Ar</button>                
+            <button class="periodic-element alkali" style="grid-column: 1; grid-row: 4;" onclick="OpenElementModelc('K')">K</button>
+            <button class="periodic-element alkaline" style="grid-column: 2; grid-row: 4;" onclick="OpenElementModelc('Ca')">Ca</button>
+        </div>
+    </div>
+<div id="element-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        
+        <div class="modal-header">
+            <span id="modal-symbol" class="modal-elem-symbol">H</span>
+            <div>
+                <h2 id="modal-name">Hydrogen</h2>
+                <span id="modal-category" class="badge">Nonmetal</span>
+            </div>
+        </div>
+
+        <div class="modal-body-grid">
+            <div class="modal-stats">
+                <p><strong>Atomic Number:</strong> <span id="modal-atomic-num">1</span></p>
+                <p><strong>Mass Number:</strong> <span id="modal-mass">1.008</span></p>
+                <p><strong>Protons:</strong> <span id="modal-protons">1</span> | <strong>Neutrons:</strong> <span id="modal-neutrons">0</span> | <strong>Electrons:</strong> <span id="modal-electrons">1</span></p>
+                <p><strong>Electron Config:</strong> <span id="modal-config">1s¹</span></p>
+                <p><strong>Valence Shell:</strong> <span id="modal-valence">1 valence electron</span></p>
+                <p><strong>Melting Point:</strong> <span id="modal-melt">-259.2°C</span> | <strong>Boiling Point:</strong> <span id="modal-boil">-252.9°C</span></p>
+                <p><strong>Everyday Use:</strong> <span id="modal-use">Rocket fuel, ammonia production, and powering fuel cells.</span></p>
+            </div>
+            
+            <div class="modal-visual-interactive">
+                <!-- Image place holder -->
+                <div class="image-box">
+                    <img id="modal-image" src="" alt="Element Image / Bohr Model" style="max-width: 100%; border-radius: 8px; display: none;">
+                    <div id="image-placeholder" class="placeholder-text"> [ Element Image]</div>
+                </div>
+
+                <!-- Question Box -->
+                <div class="interactive-box">
+                    <h4>Quiz</h4>
+                    <p id="modal-question">How many valence electrons does Hydrogen need to fill its shell?</p>
+                    <div id="interactive-options">
+                        <button onclick="checkAnswer(1)">1</button>
+                        <button onclick="checkAnswer(2)">7</button>
+                    </div>
+                    <p id="challenge-feedback" style="margin-top: 8px; font-weight: bold;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+
+</script>
