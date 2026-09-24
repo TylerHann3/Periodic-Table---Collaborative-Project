@@ -1,5 +1,5 @@
-Activity 5: Individual Feature Design — Interactive Periodic Table Modal
-Interface Specifications
+### Activity 5: Individual Feature Design — Interactive Periodic Table Modal
+# Interface Specifications
 
 What it receives: An element symbol (e.g., 'H', 'He') in the form of a string passed via the HTML button's click event.
 
@@ -7,10 +7,9 @@ What it produces: Injected text into DOM modal elements (such as element name, a
 
 What it assumes: It assumes that a complete elementsData object dictionary exists and is loaded, and that every symbol passed into the function has a matching key containing all required data attributes.
 
-Algorithm Design (Pseudocode)
+### Algorithm Design (Pseudocode)
 
 This design shows explicit sequence, selection, and iteration:
-Plaintext
 
 FUNCTION OpenElementModelc(symbol)
     // 1. SEQUENCE & SELECTION: Look up element data and check if it exists
@@ -45,7 +44,7 @@ FUNCTION OpenElementModelc(symbol)
     END IF
 END FUNCTION
 
-Abstraction Decision:
+### Abstraction Decision:
 
 I put the DOM element lookups, data injection, and dynamic option-button generation 
 into the OpenElementModelc(symbol) function so that the rest of the program only needs 
