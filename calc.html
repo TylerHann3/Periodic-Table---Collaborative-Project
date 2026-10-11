@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <button id="calculator-toggle" type="button" aria-expanded="false" aria-controls="calculator">
+        Calculator
+    </button>
+
+    <section id="calculator" aria-label="Calculator" hidden>
+        <header class="calculator-header">
+            <h1>Calculator</h1>
+            <button id="calculator-close" class="close-btn" type="button" aria-label="Close calculator">&times;</button>
+        </header>
+        <div class="display-panel" aria-live="polite">
+            <output id="display" class="result" aria-label="Calculator display">0</output>
+        </div>
+        <div id="keys" class="keys">
+            <button type="button" data-value="(" class="function-btn">(</button>
+            <button type="button" data-value=")" class="function-btn">)</button>
+            <button type="button" data-action="backspace" class="function-btn">⌫</button>
+            <button type="button" data-action="clear" class="function-btn">AC</button>
+
+            <button type="button" data-value="sqrt(" class="function-btn">√</button>
+            <button type="button" data-value="^2" class="function-btn">x²</button>
+            <button type="button" data-value="^" class="function-btn">xʸ</button>
+            <button type="button" data-value="/" class="operator-btn">÷</button>
+
+            <button type="button" data-value="7">7</button>
+            <button type="button" data-value="8">8</button>
+            <button type="button" data-value="9">9</button>
+            <button type="button" data-value="*" class="operator-btn">×</button>
+
+            <button type="button" data-value="4">4</button>
+            <button type="button" data-value="5">5</button>
+            <button type="button" data-value="6">6</button>
+            <button type="button" data-value="-" class="operator-btn">−</button>
+
+            <button type="button" data-value="1">1</button>
+            <button type="button" data-value="2">2</button>
+            <button type="button" data-value="3">3</button>
+            <button type="button" data-value="+" class="operator-btn">+</button>
+
+            <button type="button" data-value="0" class="zero-btn">0</button>
+            <button type="button" data-value=".">.</button>
+            <button type="button" data-action="calculate" class="equals-btn">=</button>
+        </div>
+    </section>
+
+    <script src="calc.js"></script>
+</body>
+</html>
