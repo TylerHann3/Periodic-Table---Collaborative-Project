@@ -44,6 +44,11 @@ button:hover {
 }
 
 .periodic-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
     width: 62px;
     height: 62px;
     margin: 0;
@@ -53,9 +58,21 @@ button:hover {
     background: #444;
     color: white;
     font-weight: 700;
-    font-size: 1rem;
+    line-height: 1;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.element-number,
+.element-mass {
+    font-size: 0.62rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.element-symbol {
+    font-size: 1.1rem;
+    line-height: 1.1;
 }
 
 .periodic-element:hover {
