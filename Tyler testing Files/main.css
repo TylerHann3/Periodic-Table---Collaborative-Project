@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#container {
+    background: #212228;
+    background-image: linear-gradient(#292a30 1em, transparent .1em),
+    linear-gradient(90deg, #292a30 1em, transparent .1em);
+    background-size: 4em 4em;
+    height: 100vh;
+    position: relative;
+}
+
+#atom-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shell {
+    position: absolute;
+    border: 2px dashed rgba(175, 218, 159, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+#shell-1 { width: 160px; height: 160px; }
+#shell-2 { width: 320px; height: 320px; }
+#shell-3 { width: 480px; height: 480px; }
+
+#card {
+    width: 24px;
+    height: 24px;
+    background-color: #AFDA9F;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(175, 218, 159, 0.5);
+    cursor: pointer;
+    position: fixed;
+    
+    top: 100px;
+    left: 100px; 
+    z-index: 10;
+}
