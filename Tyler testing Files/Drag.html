@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">   
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Drag and Drop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <meta name="theme-color" content="#f2f4ef">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="container">
-        <div id="atom-container">
-            <div class="shell" id="shell-1"></div>
-            <div class="shell" id="shell-2"></div>
-            <div class="shell" id="shell-3"></div>
-        </div>
-        <div id="card"></div>
-    </div>
+    <main id="container">
+        <header class="topbar">
+            <div class="score" aria-live="polite"><span id="score-count">0</span><span class="score-divider">/</span><span id="score-goal">5</span><span class="score-label">solved</span></div>
+        </header>
+
+        <section class="practice" aria-labelledby="prompt-title">
+            <div class="challenge-copy">
+                <h1 id="prompt-title">Build this: <span id="element-name">Hydrogen</span></h1>
+                <p class="prompt-line">Place each electron in the correct shell.</p>
+                <div class="element-label" aria-label="Target element">
+                    <span class="atomic-number" id="atomic-number">1</span>
+                    <strong id="element-symbol">H</strong>
+                    <span class="element-name-small" id="element-label">Hydrogen</span>
+                </div>
+            </div>
+
+            <div class="atom-stage" id="atom-stage" aria-label="Atom diagram. Drag electrons from the tray into the shell slots.">
+                <div class="shell" data-shell="1"></div>
+                <div class="shell" data-shell="2"></div>
+                <div class="shell" data-shell="3"></div>
+                <div class="shell" data-shell="4"></div>
+                <div class="nucleus" aria-hidden="true"><span id="nucleus-symbol">H</span></div>
+            </div>
+
+            <div class="practice-controls">
+                <div class="status-line" id="status-message" role="status" aria-live="polite">Drag the electron into an open shell slot.</div>
+                <div class="action-row">
+                    <label class="goal-control" for="goal-select">Practice
+                        <select id="goal-select" aria-label="Choose practice goal">
+                            <option value="5" selected>5 elements</option>
+                            <option value="10">10 elements</option>
+                            <option value="20">20 elements</option>
+                            <option value="0">Endless</option>
+                        </select>
+                    </label>
+                    <button id="hint-button" class="button button-quiet" type="button">Hint</button>
+                    <button id="check-button" class="button button-primary" type="button">Check answer</button>
+                    <button id="next-button" class="button button-next" type="button" hidden>Next element</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="electron-tray">
+            <div class="tray-heading"><span>Electron tray</span> <span id="tray-count">1 electron</span></div>
+            <div class="tray" id="electron-tray" aria-label="Electron tray"></div>
+        </footer>
+    </main>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
