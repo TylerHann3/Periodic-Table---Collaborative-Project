@@ -12,7 +12,6 @@
 
 
 body {
-    hue-rotate: var(--hue-neutral);
     padding: 0; 
     margin: 0;
     display: flex; 
@@ -69,10 +68,9 @@ body.wrong {
     --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-Q1-btn, .start-Q2-btn, .start-Q3-btn, .next-btn {
     font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 20px;
 }
 
 .controls {
